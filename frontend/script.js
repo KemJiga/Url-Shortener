@@ -13,7 +13,7 @@ const visitCount = document.getElementById("visitCount");
 const updateAnalyticsBtn = document.getElementById("updateAnalyticsBtn");
 
 // API base URL - adjust this to match your backend URL
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://url-shortener-t9jh.onrender.com";
 
 // Utility functions
 function showElement(element) {
