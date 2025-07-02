@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          <i class="fas fa-link"></i>
+          URL Shortener
+        </h1>
+        <p class="subtitle">
+          Shorten your long URLs into compact, shareable links
+        </p>
+      </header>
+
+      <main class="main">
+        <div class="shortener-card">
+          <form id="shortenForm" class="shorten-form">
+            <div class="input-group">
+              <input
+                type="url"
+                id="longUrl"
+                placeholder="Enter your long URL here..."
+                required
+                class="url-input"
+              />
+              <button type="submit" class="shorten-btn">
+                <i class="fas fa-cut"></i>
+                Shorten
+              </button>
+            </div>
+          </form>
+
+          <div id="result" class="result hidden">
+            <h3>Your shortened URL:</h3>
+            <div class="shortened-url">
+              <input
+                type="text"
+                id="shortUrl"
+                readonly
+                class="short-url-input"
+              />
+              <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+            <div class="analytics-section">
+              <h4>Analytics</h4>
+              <div id="analytics" class="analytics">
+                <div class="analytics-item">
+                  <i class="fas fa-eye"></i>
+                  <span>Total visits: <span id="visitCount">0</span></span>
+                </div>
+                <button
+                  id="updateAnalyticsBtn"
+                  class="update-analytics-btn"
+                  title="Update analytics"
+                >
+                  <i class="fas fa-sync-alt"></i> Update Analytics
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Shortening your URL...</p>
+          </div>
+
+          <div id="error" class="error hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="errorMessage"></span>
+          </div>
+        </div>
+
+        <div class="features">
+          <h2>Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-bolt"></i>
+              <h3>Fast & Reliable</h3>
+              <p>Instant URL shortening with 99.9% uptime</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Secure</h3>
+              <p>Safe and secure URL redirection</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Mobile Friendly</h3>
+              <p>Works perfectly on all devices</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2024 URL Shortener. Built with ❤️</p>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast hidden">
+      <i class="fas fa-check"></i>
+      <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
