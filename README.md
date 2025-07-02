@@ -32,7 +32,7 @@ The backend runs on `http://localhost:3000`
 
 ```bash
 cd frontend
-python -m http.server 8000
+npx http-server -p 8000
 ```
 
 2. Open `http://localhost:8000` in your browser
