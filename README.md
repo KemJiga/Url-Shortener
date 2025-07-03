@@ -2,10 +2,13 @@
 
 A simple URL shortening service with analytics built with Node.js/Express backend and vanilla JavaScript frontend example.
 
+## Live Demo
+[Demo](https://lively-jalebi-105f91.netlify.app/) deployed on Netifly. 
+
 ## Features
 
 - Shorten long URLs into compact links
-- Track visit analytics for shortened URLs
+- Track visit count for shortened URLs
 
 ## Setup
 
